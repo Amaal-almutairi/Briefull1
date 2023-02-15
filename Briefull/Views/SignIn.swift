@@ -10,16 +10,16 @@ import SwiftUI
 struct SignIn: View {
     @State var email = ""
     @State var passWord = ""
-//    @StateObject private var vm = SignUpViewModel()
+    @StateObject private var vm = SignUpViewModel()
     @State var showVlogSheet = false
     @State private var error:String = ""
     @State private var showingAlert = false
     @State private var alertTitle: String = "Oh No"
-//    @EnvironmentObject var session: SessionStore
+    @EnvironmentObject var session: SessionStore
     
     
     func listen(){
-//        session.listen()
+        session.listen()
     }
     
     
@@ -37,22 +37,22 @@ struct SignIn: View {
     }
     
     func signIn() {
-//        if let error = errorCheck() {
-//            self.error = error
-//            self.showingAlert = true
-//            self.clear()
-//            return
-//        }
-//
-//        AuthService.signIn(email: email, password: passWord, onSuccess:{
-//            (user) in
-//            self.clear()
-//        }){ errorMessage in
-//            print("Error \(errorMessage)")
-//             self.error = errorMessage
-//             self.showingAlert = true
-//             return
-//         }
+        if let error = errorCheck() {
+            self.error = error
+            self.showingAlert = true
+            self.clear()
+            return
+        }
+      
+        AuthService.signIn(email: email, password: passWord, onSuccess:{
+            (user) in
+            self.clear()
+        }){ errorMessage in
+            print("Error \(errorMessage)")
+             self.error = errorMessage
+             self.showingAlert = true
+             return
+         }
     }
     
     var body: some View {
@@ -105,10 +105,9 @@ struct SignIn: View {
 }
 
 struct SignIn_Previews: PreviewProvider {
-//    var vm = SignUpViewModel()
-//    var session:SessionStore
+    var vm = SignUpViewModel()
+    var session:SessionStore
     static var previews: some View {
-        SignIn()
-            //.environmentObject(SignUpViewModel()).environmentObject(SessionStore())
+        SignIn().environmentObject(SignUpViewModel()).environmentObject(SessionStore())
     }
 }

@@ -14,7 +14,7 @@ struct SignUp: View {
     @State var ConfermPassWord = ""
     @State var userName = ""
     @State private var borderColor = Color.clear
-//    @StateObject private var vm = SignUpViewModel()
+    @StateObject private var vm = SignUpViewModel()
 //    @EnvironmentObject var coordinator: Coordinator
     @State var showLogInSheet = false
     @Environment(\.presentationMode) var presentationMode
@@ -43,21 +43,21 @@ struct SignUp: View {
        
     }
     func signUp() {
-//        if let error = errorCheck() {
-//            self.error = error
-//            self.showingAlert = true
-//            self.clear()
-//            return
-//        }
-//      
-//        AuthService.signUp(username: userName, email: email, password: passWord, imageData:videoData, onSuccess:{
-//            (user) in self.clear()
-//        }){ errorMessage in
-//           print("Error \(errorMessage)")
-//            self.error = errorMessage
-//            self.showingAlert = true
-//            return
-//        }
+        if let error = errorCheck() {
+            self.error = error
+            self.showingAlert = true
+            self.clear()
+            return
+        }
+      
+        AuthService.signUp(username: userName, email: email, password: passWord, imageData:videoData, onSuccess:{
+            (user) in self.clear()
+        }){ errorMessage in
+           print("Error \(errorMessage)")
+            self.error = errorMessage
+            self.showingAlert = true
+            return
+        }
     }
                            
     var body: some View {

@@ -40,6 +40,16 @@
 		E0102B0C299D473B001D3C08 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = E0102B0B299D473B001D3C08 /* FirebaseDatabase */; };
 		E0102B0E299D473B001D3C08 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = E0102B0D299D473B001D3C08 /* FirebaseFirestore */; };
 		E0102B10299D473B001D3C08 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = E0102B0F299D473B001D3C08 /* FirebaseStorage */; };
+		E0102B12299D48F3001D3C08 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0102B11299D48F3001D3C08 /* AuthService.swift */; };
+		E0102B14299D4907001D3C08 /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0102B13299D4907001D3C08 /* StorageService.swift */; };
+		E0102B16299D4919001D3C08 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0102B15299D4919001D3C08 /* SignUpViewModel.swift */; };
+		E0102B18299D492F001D3C08 /* SessionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0102B17299D492F001D3C08 /* SessionStore.swift */; };
+		E0102B1A299D4940001D3C08 /* VideoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0102B19299D4940001D3C08 /* VideoService.swift */; };
+		E0102B1C299D4955001D3C08 /* VideotCardService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0102B1B299D4955001D3C08 /* VideotCardService.swift */; };
+		E0102B1E299D4968001D3C08 /* ProfileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0102B1D299D4968001D3C08 /* ProfileService.swift */; };
+		E0102B20299D4979001D3C08 /* SearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0102B1F299D4979001D3C08 /* SearchService.swift */; };
+		E0102B22299D498C001D3C08 /* FollowService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0102B21299D498C001D3C08 /* FollowService.swift */; };
+		E0102B24299D4A8B001D3C08 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0102B23299D4A8B001D3C08 /* ImagePicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,6 +83,16 @@
 		E0102B02299D44B5001D3C08 /* FollowButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowButton.swift; sourceTree = "<group>"; };
 		E0102B04299D44BE001D3C08 /* UsersProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersProfileView.swift; sourceTree = "<group>"; };
 		E0102B06299D45FF001D3C08 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E0102B11299D48F3001D3C08 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		E0102B13299D4907001D3C08 /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
+		E0102B15299D4919001D3C08 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
+		E0102B17299D492F001D3C08 /* SessionStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionStore.swift; sourceTree = "<group>"; };
+		E0102B19299D4940001D3C08 /* VideoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoService.swift; sourceTree = "<group>"; };
+		E0102B1B299D4955001D3C08 /* VideotCardService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideotCardService.swift; sourceTree = "<group>"; };
+		E0102B1D299D4968001D3C08 /* ProfileService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileService.swift; sourceTree = "<group>"; };
+		E0102B1F299D4979001D3C08 /* SearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchService.swift; sourceTree = "<group>"; };
+		E0102B21299D498C001D3C08 /* FollowService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowService.swift; sourceTree = "<group>"; };
+		E0102B23299D4A8B001D3C08 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +156,7 @@
 				E0102AD6299D42DB001D3C08 /* ImageProfile.swift */,
 				E0102AD8299D4313001D3C08 /* ErrorMessage.swift */,
 				E0102ADA299D433B001D3C08 /* ExtensionFile.swift */,
+				E0102B23299D4A8B001D3C08 /* ImagePicker.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -152,6 +173,15 @@
 		E0102AD0299D420D001D3C08 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				E0102B11299D48F3001D3C08 /* AuthService.swift */,
+				E0102B13299D4907001D3C08 /* StorageService.swift */,
+				E0102B15299D4919001D3C08 /* SignUpViewModel.swift */,
+				E0102B17299D492F001D3C08 /* SessionStore.swift */,
+				E0102B19299D4940001D3C08 /* VideoService.swift */,
+				E0102B1B299D4955001D3C08 /* VideotCardService.swift */,
+				E0102B1D299D4968001D3C08 /* ProfileService.swift */,
+				E0102B1F299D4979001D3C08 /* SearchService.swift */,
+				E0102B21299D498C001D3C08 /* FollowService.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -267,27 +297,37 @@
 				E0102AE9299D43FF001D3C08 /* SignUp.swift in Sources */,
 				E0102AB4299D3F56001D3C08 /* BriefullApp.swift in Sources */,
 				E0102AED299D4441001D3C08 /* Profile.swift in Sources */,
+				E0102B20299D4979001D3C08 /* SearchService.swift in Sources */,
 				E0102ADD299D435D001D3C08 /* UserModel.swift in Sources */,
 				E0102AE7299D43BE001D3C08 /* SignIn.swift in Sources */,
 				E0102AFB299D4492001D3C08 /* ImojiSheet.swift in Sources */,
+				E0102B1C299D4955001D3C08 /* VideotCardService.swift in Sources */,
 				E0102B01299D44AD001D3C08 /* ProfileHeader.swift in Sources */,
 				E0102AD7299D42DB001D3C08 /* ImageProfile.swift in Sources */,
 				E0102AF5299D4476001D3C08 /* AddReaction.swift in Sources */,
+				E0102B1A299D4940001D3C08 /* VideoService.swift in Sources */,
 				E0102AFD299D449B001D3C08 /* Timeline.swift in Sources */,
 				E0102ADF299D4370001D3C08 /* VideoModel.swift in Sources */,
+				E0102B14299D4907001D3C08 /* StorageService.swift in Sources */,
 				E0102B05299D44BE001D3C08 /* UsersProfileView.swift in Sources */,
 				E0102AD9299D4313001D3C08 /* ErrorMessage.swift in Sources */,
+				E0102B16299D4919001D3C08 /* SignUpViewModel.swift in Sources */,
 				E0102AEB299D4436001D3C08 /* Vlog.swift in Sources */,
+				E0102B24299D4A8B001D3C08 /* ImagePicker.swift in Sources */,
+				E0102B22299D498C001D3C08 /* FollowService.swift in Sources */,
 				E0102ADB299D433B001D3C08 /* ExtensionFile.swift in Sources */,
 				E0102AF1299D4460001D3C08 /* UserProfile.swift in Sources */,
 				E0102AFF299D44A5001D3C08 /* SearchBar.swift in Sources */,
 				E0102AF3299D4469001D3C08 /* EditPersonalInfo.swift in Sources */,
 				E0102AE3299D4395001D3C08 /* Tab.swift in Sources */,
+				E0102B12299D48F3001D3C08 /* AuthService.swift in Sources */,
 				E0102AD5299D42BC001D3C08 /* Items.swift in Sources */,
 				E0102B03299D44B5001D3C08 /* FollowButton.swift in Sources */,
+				E0102B18299D492F001D3C08 /* SessionStore.swift in Sources */,
 				E0102AF7299D4480001D3C08 /* ResetPasswordSheet.swift in Sources */,
 				E0102AD3299D423B001D3C08 /* HomeView.swift in Sources */,
 				E0102AF9299D4489001D3C08 /* ForgetPasswordSheet.swift in Sources */,
+				E0102B1E299D4968001D3C08 /* ProfileService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
