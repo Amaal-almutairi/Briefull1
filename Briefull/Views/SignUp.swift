@@ -15,7 +15,7 @@ struct SignUp: View {
     @State var userName = ""
     @State private var borderColor = Color.clear
     @StateObject private var vm = SignUpViewModel()
-//    @EnvironmentObject var coordinator: Coordinator
+    //    @EnvironmentObject var coordinator: Coordinator
     @State var showLogInSheet = false
     @Environment(\.presentationMode) var presentationMode
     @State private var error:String = ""
@@ -23,7 +23,7 @@ struct SignUp: View {
     @State private var alertTitle: String = "Oh No"
     @State private var videoData = Data()
     @State private var isLinkActive = false
-
+    
     func errorCheck() -> String? {
         if email.trimmingCharacters (in: .whitespaces).isEmpty ||
             passWord.trimmingCharacters (in: .whitespaces).isEmpty ||
@@ -40,7 +40,7 @@ struct SignUp: View {
         self.passWord = ""
         self.ConfermPassWord = ""
         self.videoData = Data()
-       
+        
     }
     func signUp() {
         if let error = errorCheck() {
@@ -49,120 +49,84 @@ struct SignUp: View {
             self.clear()
             return
         }
-      
+        
         AuthService.signUp(username: userName, email: email, password: passWord, imageData:videoData, onSuccess:{
             (user) in self.clear()
         }){ errorMessage in
-           print("Error \(errorMessage)")
+            print("Error \(errorMessage)")
             self.error = errorMessage
             self.showingAlert = true
             return
         }
     }
-                           
+    
     var body: some View {
         VStack{
             
             ScrollView {
                 ZStack(alignment: .center){
-                  
                     
-                    VStack(alignment: .leading){
-                        Text("Sign Up").padding(.vertical).padding(.top,200).modifier(Items.TexStyleModifier()).padding(.bottom,100)
-                        TextField("Enter userName", text: $userName).textFieldStyle(RoundedBorderTextFieldStyle()).padding()
-                        TextField("Enter Your Email Address", text: $email).textFieldStyle(RoundedBorderTextFieldStyle()).padding().keyboardType(.emailAddress)
-                        SecureField("Enter Your PassWord", text: $passWord).textFieldStyle(RoundedBorderTextFieldStyle()).padding()
-                        SecureField("Re - Enter Your PassWord", text: $ConfermPassWord).textFieldStyle(RoundedBorderTextFieldStyle()).padding()
-//                        Button(action: { signUp()
-//                            self.isLinkActive = true
-//
-//                        }){
-//                            Text("Sign Up")
-//                        }
-//                        .modifier(Items.ButtonModifier()).alert(isPresented: $showingAlert){
-//                            Alert(title: Text(alertTitle),message: Text(error),dismissButton: .default(Text("OK")))
-//                        }
-//                            .navigationDestination(
-//                                isPresented: $isLinkActive) {
-//                                    Tab()
-//
-//                                }
-                               
+                    
+                    VStack(){
+                        Text("Create Account").padding(.vertical).padding(.top,200).modifier(Items.TexStyleModifier()).padding(.bottom,100)
+                        
+                        Text("UserName")
+                            .modifier(Items.TextModifier())
+                        
+                        TextField("@Ghada12", text: $userName)
+                            .modifier(Items.TextFieldStyleModifier())
+                        
+                        
+                        Text("Email")
+                            .modifier(Items.TextModifier())
+                        
+                        TextField("email@ Example.com", text: $email).modifier(Items.TextFieldStyleModifier()).keyboardType(.emailAddress)
+                        VStack(){
+                            Text("Password")
+                                .modifier(Items.TextModifier())
+                            SecureField("**************", text: $passWord).modifier(Items.TextFieldStyleModifier())
+                            
+                            Text("Confirm Password")
+                                .modifier(Items.TextModifier())
+                            
+                            SecureField("**************", text: $ConfermPassWord).modifier(Items.TextFieldStyleModifier())
+                        }
+                        
                         NavigationLink(destination: Tab(), isActive: $isLinkActive){
-
+                            
                             Button(action: { signUp()
                                 self.isLinkActive = true
-
+                                
                             }){
                                 Text("Sign Up")
                             }
                         } .modifier(Items.ButtonModifier()).alert(isPresented: $showingAlert){
-                        Alert(title: Text(alertTitle),message: Text(error),dismissButton: .default(Text("OK")))
-                    }
-////                        .navigationDestination(
-////                            isPresented: $isLinkActive) {
-////                             SignIn()
-////
-////                          }
-////                            Text("").hidden()
-//                        }
-                     
-//
-//                        Button("Sign Up") {
-//
-//                            vm.signUp(email: email, password: passWord) { result in
-//                                switch result {
-//                                case .success(_):
-//                                    coordinator.path.append(.login)
-//                                case .failure(let error):
-//                                    vm.errorMessage = error.errorMessage
-//                                }
-//                            }
-//
-//
-//                        }.modifier(Items.ButtonModifier()).padding().foregroundColor(.white)
-//                        if let errorMessage = vm.errorMessage {
-//                            Text(errorMessage)
-//                        }
+                            Alert(title: Text(alertTitle),message: Text(error),dismissButton: .default(Text("OK")))
+                        }
+                        .padding()
+                        
+                        
                         HStack{
                             Spacer()
-//                            NavigationLink(destination: SignIn()) {
-//                              Text("Have an Account?")
-//                            }
-//                            Button("Have an Account?", action: {
-//                                presentationMode.wrappedValue.dismiss()
-//
-//                            }).foregroundColor(Color("mauve"))
-                          
-
-
-                        }.padding()
-
-                    }.padding(.bottom,400).padding(.trailing)
+                            Button("Have an Account? Sign in ", action: {
+                                SignIn()
+                                presentationMode.wrappedValue.dismiss()
+                                
+                            }).foregroundColor(Color("Black"))
+                                .font(.caption)
+                                .padding(.horizontal, 56)
+                                .padding(.top)
+                            
+                        }
+                        
+                    }.padding()
                 }
                 
             }
-        }.padding(.leading)
+        }
         
         
-//        .sheet(isPresented: $showLogInSheet){
-//            SignIn()
-//                .presentationDetents([.height(470)])
-//                .presentationDragIndicator(.visible)
-//        }
     }
-    
-//    func autheticateUser(email: String, password: String){
-//
-//        if email == email && password.lowercased() == passWord{
-//
-//
-//        }else{
-//            borderColor = Color.red
-//        }
-//    }
-    
-    
 }
 
 
@@ -172,14 +136,14 @@ struct SignUp: View {
 struct SignUp_Previews: PreviewProvider {
     static var previews: some View {
         SignUp()
-//        NavigationStack {
-//            SignUp()
-//        }.navigationDestination(for: Route.self) { route in
-//            switch route {
-//            case .SessionStore:
-//                Text("SessionStore")
-//
-//            }
-//        }
+        //        NavigationStack {
+        //            SignUp()
+        //        }.navigationDestination(for: Route.self) { route in
+        //            switch route {
+        //            case .SessionStore:
+        //                Text("SessionStore")
+        //
+        //            }
+        //        }
     }
 }

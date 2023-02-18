@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		693D0C5029A0F2B50068CA36 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 693D0C4F29A0F2B50068CA36 /* FirebaseAnalytics */; };
+		693D0C5229A0F2C30068CA36 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 693D0C5129A0F2C30068CA36 /* FirebaseMessaging */; };
+		693D0C5929A108890068CA36 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 693D0C5B29A108890068CA36 /* Localizable.strings */; };
+		693D0C5E29A141500068CA36 /* ForgotPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693D0C5D29A141500068CA36 /* ForgotPasswordViewModel.swift */; };
+		693D0C6029A141860068CA36 /* ForgotPasswordService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693D0C5F29A141860068CA36 /* ForgotPasswordService.swift */; };
+		693D0C6229A141BD0068CA36 /* AfterForgotPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693D0C6129A141BD0068CA36 /* AfterForgotPassword.swift */; };
 		E0102AB4299D3F56001D3C08 /* BriefullApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0102AB3299D3F56001D3C08 /* BriefullApp.swift */; };
 		E0102AB8299D3F57001D3C08 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0102AB7299D3F57001D3C08 /* Assets.xcassets */; };
 		E0102ABB299D3F57001D3C08 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0102ABA299D3F57001D3C08 /* Preview Assets.xcassets */; };
@@ -53,6 +59,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		693D0C5529A0F5680068CA36 /* Briefull.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Briefull.entitlements; sourceTree = "<group>"; };
+		693D0C5629A0F5710068CA36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		693D0C5A29A108890068CA36 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
+		693D0C5C29A108910068CA36 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		693D0C5D29A141500068CA36 /* ForgotPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewModel.swift; sourceTree = "<group>"; };
+		693D0C5F29A141860068CA36 /* ForgotPasswordService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordService.swift; sourceTree = "<group>"; };
+		693D0C6129A141BD0068CA36 /* AfterForgotPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AfterForgotPassword.swift; sourceTree = "<group>"; };
 		E0102AB0299D3F56001D3C08 /* Briefull.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Briefull.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0102AB3299D3F56001D3C08 /* BriefullApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BriefullApp.swift; sourceTree = "<group>"; };
 		E0102AB7299D3F57001D3C08 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -100,9 +113,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				693D0C5229A0F2C30068CA36 /* FirebaseMessaging in Frameworks */,
 				E0102B0C299D473B001D3C08 /* FirebaseDatabase in Frameworks */,
 				E0102B10299D473B001D3C08 /* FirebaseStorage in Frameworks */,
 				E0102B0A299D473B001D3C08 /* FirebaseAuth in Frameworks */,
+				693D0C5029A0F2B50068CA36 /* FirebaseAnalytics in Frameworks */,
 				E0102B0E299D473B001D3C08 /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -110,11 +125,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		693D0C4E29A0F2B50068CA36 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E0102AA7299D3F56001D3C08 = {
 			isa = PBXGroup;
 			children = (
+				693D0C5B29A108890068CA36 /* Localizable.strings */,
 				E0102AB2299D3F56001D3C08 /* Briefull */,
 				E0102AB1299D3F56001D3C08 /* Products */,
+				693D0C4E29A0F2B50068CA36 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -129,6 +153,8 @@
 		E0102AB2299D3F56001D3C08 /* Briefull */ = {
 			isa = PBXGroup;
 			children = (
+				693D0C5629A0F5710068CA36 /* Info.plist */,
+				693D0C5529A0F5680068CA36 /* Briefull.entitlements */,
 				E0102AB3299D3F56001D3C08 /* BriefullApp.swift */,
 				E0102B06299D45FF001D3C08 /* GoogleService-Info.plist */,
 				E0102AB7299D3F57001D3C08 /* Assets.xcassets */,
@@ -157,6 +183,7 @@
 				E0102AD8299D4313001D3C08 /* ErrorMessage.swift */,
 				E0102ADA299D433B001D3C08 /* ExtensionFile.swift */,
 				E0102B23299D4A8B001D3C08 /* ImagePicker.swift */,
+				693D0C5F29A141860068CA36 /* ForgotPasswordService.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -182,6 +209,7 @@
 				E0102B1D299D4968001D3C08 /* ProfileService.swift */,
 				E0102B1F299D4979001D3C08 /* SearchService.swift */,
 				E0102B21299D498C001D3C08 /* FollowService.swift */,
+				693D0C5D29A141500068CA36 /* ForgotPasswordViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -201,6 +229,7 @@
 				E0102AF4299D4476001D3C08 /* AddReaction.swift */,
 				E0102AF6299D4480001D3C08 /* ResetPasswordSheet.swift */,
 				E0102AF8299D4489001D3C08 /* ForgetPasswordSheet.swift */,
+				693D0C6129A141BD0068CA36 /* AfterForgotPassword.swift */,
 				E0102AFA299D4492001D3C08 /* ImojiSheet.swift */,
 				E0102AFC299D449B001D3C08 /* Timeline.swift */,
 				E0102AD2299D423B001D3C08 /* HomeView.swift */,
@@ -233,6 +262,8 @@
 				E0102B0B299D473B001D3C08 /* FirebaseDatabase */,
 				E0102B0D299D473B001D3C08 /* FirebaseFirestore */,
 				E0102B0F299D473B001D3C08 /* FirebaseStorage */,
+				693D0C4F29A0F2B50068CA36 /* FirebaseAnalytics */,
+				693D0C5129A0F2C30068CA36 /* FirebaseMessaging */,
 			);
 			productName = Briefull;
 			productReference = E0102AB0299D3F56001D3C08 /* Briefull.app */;
@@ -260,6 +291,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ar,
 			);
 			mainGroup = E0102AA7299D3F56001D3C08;
 			packageReferences = (
@@ -280,6 +312,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E0102ABB299D3F57001D3C08 /* Preview Assets.xcassets in Resources */,
+				693D0C5929A108890068CA36 /* Localizable.strings in Resources */,
 				E0102AB8299D3F57001D3C08 /* Assets.xcassets in Resources */,
 				E0102B07299D45FF001D3C08 /* GoogleService-Info.plist in Resources */,
 			);
@@ -303,6 +336,7 @@
 				E0102AFB299D4492001D3C08 /* ImojiSheet.swift in Sources */,
 				E0102B1C299D4955001D3C08 /* VideotCardService.swift in Sources */,
 				E0102B01299D44AD001D3C08 /* ProfileHeader.swift in Sources */,
+				693D0C6229A141BD0068CA36 /* AfterForgotPassword.swift in Sources */,
 				E0102AD7299D42DB001D3C08 /* ImageProfile.swift in Sources */,
 				E0102AF5299D4476001D3C08 /* AddReaction.swift in Sources */,
 				E0102B1A299D4940001D3C08 /* VideoService.swift in Sources */,
@@ -314,6 +348,7 @@
 				E0102B16299D4919001D3C08 /* SignUpViewModel.swift in Sources */,
 				E0102AEB299D4436001D3C08 /* Vlog.swift in Sources */,
 				E0102B24299D4A8B001D3C08 /* ImagePicker.swift in Sources */,
+				693D0C5E29A141500068CA36 /* ForgotPasswordViewModel.swift in Sources */,
 				E0102B22299D498C001D3C08 /* FollowService.swift in Sources */,
 				E0102ADB299D433B001D3C08 /* ExtensionFile.swift in Sources */,
 				E0102AF1299D4460001D3C08 /* UserProfile.swift in Sources */,
@@ -322,6 +357,7 @@
 				E0102AE3299D4395001D3C08 /* Tab.swift in Sources */,
 				E0102B12299D48F3001D3C08 /* AuthService.swift in Sources */,
 				E0102AD5299D42BC001D3C08 /* Items.swift in Sources */,
+				693D0C6029A141860068CA36 /* ForgotPasswordService.swift in Sources */,
 				E0102B03299D44B5001D3C08 /* FollowButton.swift in Sources */,
 				E0102B18299D492F001D3C08 /* SessionStore.swift in Sources */,
 				E0102AF7299D4480001D3C08 /* ResetPasswordSheet.swift in Sources */,
@@ -332,6 +368,18 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		693D0C5B29A108890068CA36 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				693D0C5A29A108890068CA36 /* ar */,
+				693D0C5C29A108910068CA36 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		E0102ABC299D3F57001D3C08 /* Debug */ = {
@@ -453,12 +501,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Briefull/Briefull.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Briefull/Preview Content\"";
-				DEVELOPMENT_TEAM = QBHM4NR7GG;
+				DEVELOPMENT_TEAM = 22M78Q9L24;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Briefull/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -482,12 +532,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Briefull/Briefull.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Briefull/Preview Content\"";
-				DEVELOPMENT_TEAM = QBHM4NR7GG;
+				DEVELOPMENT_TEAM = 22M78Q9L24;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Briefull/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -541,6 +593,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		693D0C4F29A0F2B50068CA36 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E0102B08299D473A001D3C08 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		693D0C5129A0F2C30068CA36 /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E0102B08299D473A001D3C08 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
+		};
 		E0102B09299D473B001D3C08 /* FirebaseAuth */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = E0102B08299D473A001D3C08 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;

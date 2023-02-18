@@ -1,0 +1,29 @@
+/*
+  Localizable.strings
+  Briefull
+
+  Created by Ghada Amer Alshahrani on 24/07/1444 AH.
+  
+*/
+"Welcome" = "مرحبا";
+"Email" = "البريد الألكتروني";
+"Password" = "كلمة المرور";
+"Sign In" = "تسجيل الدخول";
+"OK" = "موافق";
+"Forget Password?" = "نسيت كلمة السر ؟";
+"Create New Account?" = "إنشاء حساب جديد ؟";
+"Create Account" = "إنشاء حساب";
+"UserName" = "اسم المستخدم";
+"Confirm Password" = "تأكيد كلمة المرور";
+"Sign Up" = "انشاء حساب ";
+"Have an Account?" = "لديك حساب ؟";
+"Edit" = "تعديل";
+"Save" = "حفظ";
+"Choose A Photo" = "اختار صورة";
+"Take A Photo" = "التقاط صورة";
+"Send Passowrd Reset" = "إرسال إعادة تعيين كلمة المرور";
+"Caption" = "الوصف";
+"Publish" = "نشر";
+"Password Reset Link Sent" = "تم إرسال رابط إعادة تعيين كلمة المرور";
+"Please Check your email to Change your Password" = "يرجى التحقق من بريدك الإلكتروني لتغيير كلمة المرور الخاصة بك";
+

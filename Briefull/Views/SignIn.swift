@@ -43,16 +43,16 @@ struct SignIn: View {
             self.clear()
             return
         }
-      
+        
         AuthService.signIn(email: email, password: passWord, onSuccess:{
             (user) in
             self.clear()
         }){ errorMessage in
             print("Error \(errorMessage)")
-             self.error = errorMessage
-             self.showingAlert = true
-             return
-         }
+            self.error = errorMessage
+            self.showingAlert = true
+            return
+        }
     }
     
     var body: some View {
@@ -61,44 +61,57 @@ struct SignIn: View {
                 ZStack(alignment: .center){
                     
                     
-                    VStack(alignment: .leading){
-                        Text("Sign In").padding(.top,200).modifier(Items.TexStyleModifier()).padding(.bottom,100)
+                    VStack(){
+                        Text("Welcome").padding(.top,200).modifier(Items.TexStyleModifier()).padding(.bottom,100)
+                            .font(.largeTitle)
                         
-                        TextField("Enter Your Email Address", text: $email).padding()
-                            //.textFieldStyle(RoundedBorderTextFieldStyle()).padding()
-                        SecureField(" Enter Your PassWord", text: $passWord).padding()
-                            //.textFieldStyle(RoundedBorderTextFieldStyle()).padding()
+                        Text("Email")
+                            .modifier(Items.TextModifier())
+                        
+                        TextField("email@ Example.com", text: $email)
+                            .modifier(Items.TextFieldStyleModifier())
+                        
+                        Text("Password")
+                            .modifier(Items.TextModifier())
+                        
+                        SecureField("********************", text: $passWord)
+                            .modifier(Items.TextFieldStyleModifier())
+                        
                         Button(action: { signIn()
-                        listen()
-                    }){
-                        Text("Sign In")
-                    }.modifier(Items.ButtonModifier()).padding().alert(isPresented: $showingAlert){
+                            listen()
+                        }){
+                            Text("Sign In")
+                        }.modifier(Items.ButtonModifier()).padding().alert(isPresented: $showingAlert){
                             Alert(title: Text(alertTitle),message: Text(error),dismissButton: .default(Text("OK")))
                         }
                         
-//                        if let errorMessage = vm.errorMessage {
-//                            Text(errorMessage)
-//                        }
-                        HStack{
-                            Button {
-                              
-                            } label: {
-                                Text("Forget Password")
+                        //                        if let errorMessage = vm.errorMessage {
+                        //                            Text(errorMessage)
+                        //                        }
+                        HStack(alignment: .bottom){
+                            NavigationLink(destination: ForgetPasswordSheet()) {
+                                Text("Forget Password?").foregroundColor((Color.black))
                             }
+                            
                             Spacer()
                             NavigationLink(destination: SignUp()) {
-                                Text("Create New Account?").foregroundColor((Color("mauve")))
+                                Text("Create New Account?").foregroundColor((Color.black))
                             }
-
-
-                        }.padding().accentColor(Color("mauve"))
-
-                    }.padding().padding(.bottom,400)
+                            
+                            
+                            
+                            
+                        }.padding(.horizontal, 56)
+                            .padding(.top)
+                            .accentColor(Color.black)
+                            .font(.system(size: 12))
+                        
+                    }
                 }
                 
             }.navigationBarBackButtonHidden(true)
         }.fullScreenCover(isPresented: $showVlogSheet) {
-           Tab()
+            Tab()
         }
     }
     

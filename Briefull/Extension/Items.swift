@@ -15,10 +15,11 @@ struct Items: View {
             content
                 .font(.headline)
                // .frame(maxWidth: .infinity)
-                .frame(width:frameSize,height: 55)
-                .background(Color.black)
+                .frame(width:frameSize,height: 44)
+                .background(Color("mauve"))
                 .foregroundColor(.white)
-                .cornerRadius(20)
+                .cornerRadius(12)
+                .padding(.horizontal, 20)
                 
                
         }
@@ -32,7 +33,7 @@ struct Items: View {
                 .font(.headline)
                // .frame(maxWidth: .infinity)
                 .frame(width:70,height: 20)
-                .background(Color.black)
+                .background(Color("mauve"))
                 .foregroundColor(.white)
                 .cornerRadius(20)
                 
@@ -45,9 +46,36 @@ struct Items: View {
 
         func body(content: Content) -> some View {
             content
-                .font(.headline)
+                .font(.largeTitle)
                 .font(.system(size: 20))
                 .frame(width:frameSize,height: 55)
+               
+            
+        }
+    }
+    struct TextModifier: ViewModifier {
+        @State var frameSize: CGFloat = UIScreen.main.bounds.width - 20 // display the content in all iphones in the same size(width only)
+
+        func body(content: Content) -> some View {
+            content
+                
+                .font(.system(size: 14))
+                .padding(.top,16)
+                .padding(.bottom, 8.0)
+                .padding(.leading, -180)
+
+            
+        }
+    }
+    
+    struct TitlesStyleModifier: ViewModifier {
+        @State var frameSize: CGFloat = UIScreen.main.bounds.width - 20 // display the content in all iphones in the same size(width only)
+
+        func body(content: Content) -> some View {
+            content
+                .font(.largeTitle)
+                .frame(width:frameSize,height: 30)
+
                
             
         }
@@ -58,15 +86,17 @@ struct Items: View {
 
         func body(content: Content) -> some View {
             content
-                .font(.headline)
+                .font(.callout)
                 .font(.system(size: 16))
-                .frame(width:frameSize,height: 55)
-                .foregroundColor(.gray)
-                .background(Color(.white).cornerRadius(10))
-                    .padding()
+                .padding(16.0)
+                .frame(width:frameSize,height: 44)
+                .background(Color("LGray").cornerRadius(10))
+                .foregroundColor(.black)
+                .padding(.horizontal, 20)
             
         }
     }
+    
     
     var body: some View {
         Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
