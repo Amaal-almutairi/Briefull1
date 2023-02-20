@@ -13,6 +13,10 @@
 		693D0C5E29A141500068CA36 /* ForgotPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693D0C5D29A141500068CA36 /* ForgotPasswordViewModel.swift */; };
 		693D0C6029A141860068CA36 /* ForgotPasswordService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693D0C5F29A141860068CA36 /* ForgotPasswordService.swift */; };
 		693D0C6229A141BD0068CA36 /* AfterForgotPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693D0C6129A141BD0068CA36 /* AfterForgotPassword.swift */; };
+		A4EC281129A3C9C3004215B5 /* FinalPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4EC281029A3C9C3004215B5 /* FinalPreview.swift */; };
+		A4EC281329A3CA5E004215B5 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4EC281229A3CA5E004215B5 /* Home.swift */; };
+		A4EC281729A3CB49004215B5 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4EC281629A3CB49004215B5 /* CameraView.swift */; };
+		A4EC281929A3CD6E004215B5 /* CameraViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4EC281829A3CD6E004215B5 /* CameraViewModel.swift */; };
 		E0102AB4299D3F56001D3C08 /* BriefullApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0102AB3299D3F56001D3C08 /* BriefullApp.swift */; };
 		E0102AB8299D3F57001D3C08 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0102AB7299D3F57001D3C08 /* Assets.xcassets */; };
 		E0102ABB299D3F57001D3C08 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0102ABA299D3F57001D3C08 /* Preview Assets.xcassets */; };
@@ -27,7 +31,6 @@
 		E0102AE5299D43A5001D3C08 /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0102AE4299D43A5001D3C08 /* Main.swift */; };
 		E0102AE7299D43BE001D3C08 /* SignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0102AE6299D43BE001D3C08 /* SignIn.swift */; };
 		E0102AE9299D43FF001D3C08 /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0102AE8299D43FF001D3C08 /* SignUp.swift */; };
-		E0102AEB299D4436001D3C08 /* Vlog.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0102AEA299D4436001D3C08 /* Vlog.swift */; };
 		E0102AED299D4441001D3C08 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0102AEC299D4441001D3C08 /* Profile.swift */; };
 		E0102AEF299D444F001D3C08 /* FindFriends.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0102AEE299D444F001D3C08 /* FindFriends.swift */; };
 		E0102AF1299D4460001D3C08 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0102AF0299D4460001D3C08 /* UserProfile.swift */; };
@@ -66,6 +69,10 @@
 		693D0C5D29A141500068CA36 /* ForgotPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewModel.swift; sourceTree = "<group>"; };
 		693D0C5F29A141860068CA36 /* ForgotPasswordService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordService.swift; sourceTree = "<group>"; };
 		693D0C6129A141BD0068CA36 /* AfterForgotPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AfterForgotPassword.swift; sourceTree = "<group>"; };
+		A4EC281029A3C9C3004215B5 /* FinalPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalPreview.swift; sourceTree = "<group>"; };
+		A4EC281229A3CA5E004215B5 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		A4EC281629A3CB49004215B5 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
+		A4EC281829A3CD6E004215B5 /* CameraViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewModel.swift; sourceTree = "<group>"; };
 		E0102AB0299D3F56001D3C08 /* Briefull.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Briefull.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0102AB3299D3F56001D3C08 /* BriefullApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BriefullApp.swift; sourceTree = "<group>"; };
 		E0102AB7299D3F57001D3C08 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -81,7 +88,6 @@
 		E0102AE4299D43A5001D3C08 /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
 		E0102AE6299D43BE001D3C08 /* SignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignIn.swift; sourceTree = "<group>"; };
 		E0102AE8299D43FF001D3C08 /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
-		E0102AEA299D4436001D3C08 /* Vlog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vlog.swift; sourceTree = "<group>"; };
 		E0102AEC299D4441001D3C08 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		E0102AEE299D444F001D3C08 /* FindFriends.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindFriends.swift; sourceTree = "<group>"; };
 		E0102AF0299D4460001D3C08 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
@@ -193,6 +199,7 @@
 			children = (
 				E0102ADC299D435D001D3C08 /* UserModel.swift */,
 				E0102ADE299D4370001D3C08 /* VideoModel.swift */,
+				A4EC281829A3CD6E004215B5 /* CameraViewModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -210,6 +217,7 @@
 				E0102B1F299D4979001D3C08 /* SearchService.swift */,
 				E0102B21299D498C001D3C08 /* FollowService.swift */,
 				693D0C5D29A141500068CA36 /* ForgotPasswordViewModel.swift */,
+				A4EC281629A3CB49004215B5 /* CameraView.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -221,7 +229,7 @@
 				E0102AE2299D4395001D3C08 /* Tab.swift */,
 				E0102AE6299D43BE001D3C08 /* SignIn.swift */,
 				E0102AE8299D43FF001D3C08 /* SignUp.swift */,
-				E0102AEA299D4436001D3C08 /* Vlog.swift */,
+				A4EC281229A3CA5E004215B5 /* Home.swift */,
 				E0102AEC299D4441001D3C08 /* Profile.swift */,
 				E0102AEE299D444F001D3C08 /* FindFriends.swift */,
 				E0102AF0299D4460001D3C08 /* UserProfile.swift */,
@@ -237,6 +245,7 @@
 				E0102B00299D44AD001D3C08 /* ProfileHeader.swift */,
 				E0102B02299D44B5001D3C08 /* FollowButton.swift */,
 				E0102B04299D44BE001D3C08 /* UsersProfileView.swift */,
+				A4EC281029A3C9C3004215B5 /* FinalPreview.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -336,6 +345,7 @@
 				E0102AFB299D4492001D3C08 /* ImojiSheet.swift in Sources */,
 				E0102B1C299D4955001D3C08 /* VideotCardService.swift in Sources */,
 				E0102B01299D44AD001D3C08 /* ProfileHeader.swift in Sources */,
+				A4EC281929A3CD6E004215B5 /* CameraViewModel.swift in Sources */,
 				693D0C6229A141BD0068CA36 /* AfterForgotPassword.swift in Sources */,
 				E0102AD7299D42DB001D3C08 /* ImageProfile.swift in Sources */,
 				E0102AF5299D4476001D3C08 /* AddReaction.swift in Sources */,
@@ -346,9 +356,10 @@
 				E0102B05299D44BE001D3C08 /* UsersProfileView.swift in Sources */,
 				E0102AD9299D4313001D3C08 /* ErrorMessage.swift in Sources */,
 				E0102B16299D4919001D3C08 /* SignUpViewModel.swift in Sources */,
-				E0102AEB299D4436001D3C08 /* Vlog.swift in Sources */,
 				E0102B24299D4A8B001D3C08 /* ImagePicker.swift in Sources */,
+				A4EC281329A3CA5E004215B5 /* Home.swift in Sources */,
 				693D0C5E29A141500068CA36 /* ForgotPasswordViewModel.swift in Sources */,
+				A4EC281729A3CB49004215B5 /* CameraView.swift in Sources */,
 				E0102B22299D498C001D3C08 /* FollowService.swift in Sources */,
 				E0102ADB299D433B001D3C08 /* ExtensionFile.swift in Sources */,
 				E0102AF1299D4460001D3C08 /* UserProfile.swift in Sources */,
@@ -358,6 +369,7 @@
 				E0102B12299D48F3001D3C08 /* AuthService.swift in Sources */,
 				E0102AD5299D42BC001D3C08 /* Items.swift in Sources */,
 				693D0C6029A141860068CA36 /* ForgotPasswordService.swift in Sources */,
+				A4EC281129A3C9C3004215B5 /* FinalPreview.swift in Sources */,
 				E0102B03299D44B5001D3C08 /* FollowButton.swift in Sources */,
 				E0102B18299D492F001D3C08 /* SessionStore.swift in Sources */,
 				E0102AF7299D4480001D3C08 /* ResetPasswordSheet.swift in Sources */,
@@ -505,10 +517,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Briefull/Preview Content\"";
-				DEVELOPMENT_TEAM = 22M78Q9L24;
+				DEVELOPMENT_TEAM = 9PX6F9KBFY;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Briefull/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -536,10 +550,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Briefull/Preview Content\"";
-				DEVELOPMENT_TEAM = 22M78Q9L24;
+				DEVELOPMENT_TEAM = 9PX6F9KBFY;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Briefull/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
