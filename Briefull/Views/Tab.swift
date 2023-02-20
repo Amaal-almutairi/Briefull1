@@ -9,7 +9,7 @@ import SwiftUI
 
 struct Tab: View {
     @EnvironmentObject var session: SessionStore
-// user: User(uid: "9988", email: "amaal@gmail.com", profileImageUr1: "", username: "moly", searchName: [""], caption: "molyus")
+// user: User(uid: "9988 ", email: "amaal@gmail.com", profileImageUr1: "", username: "moly", searchName: [""], caption: "molyus")
     
 //    @State var selection = 2
     @State var selection = "person.fill"
