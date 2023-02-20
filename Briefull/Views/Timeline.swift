@@ -11,7 +11,7 @@ struct Timeline: View {
     
 //    @State var emojiList:[String] = []
     @State var showImojiSheet = false
-    
+    @State var shahad = "shahad"
     var body: some View {
 //        NavigationView{
             VStack{
