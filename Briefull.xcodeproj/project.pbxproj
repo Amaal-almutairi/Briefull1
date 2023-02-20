@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4BC5D38429A35ADB00097390 /* GIFControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC5D38329A35ADB00097390 /* GIFControllerViewModel.swift */; };
+		4BC5D38729A35B4700097390 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 4BC5D38629A35B4700097390 /* SDWebImageSwiftUI */; };
+		4BC5D38A29A35B7D00097390 /* GiphyUISDK in Frameworks */ = {isa = PBXBuildFile; productRef = 4BC5D38929A35B7D00097390 /* GiphyUISDK */; };
 		693D0C5029A0F2B50068CA36 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 693D0C4F29A0F2B50068CA36 /* FirebaseAnalytics */; };
 		693D0C5229A0F2C30068CA36 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 693D0C5129A0F2C30068CA36 /* FirebaseMessaging */; };
 		693D0C5929A108890068CA36 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 693D0C5B29A108890068CA36 /* Localizable.strings */; };
@@ -59,6 +62,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4BC5D38329A35ADB00097390 /* GIFControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GIFControllerViewModel.swift; sourceTree = "<group>"; };
 		693D0C5529A0F5680068CA36 /* Briefull.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Briefull.entitlements; sourceTree = "<group>"; };
 		693D0C5629A0F5710068CA36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		693D0C5A29A108890068CA36 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -113,8 +117,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4BC5D38729A35B4700097390 /* SDWebImageSwiftUI in Frameworks */,
 				693D0C5229A0F2C30068CA36 /* FirebaseMessaging in Frameworks */,
 				E0102B0C299D473B001D3C08 /* FirebaseDatabase in Frameworks */,
+				4BC5D38A29A35B7D00097390 /* GiphyUISDK in Frameworks */,
 				E0102B10299D473B001D3C08 /* FirebaseStorage in Frameworks */,
 				E0102B0A299D473B001D3C08 /* FirebaseAuth in Frameworks */,
 				693D0C5029A0F2B50068CA36 /* FirebaseAnalytics in Frameworks */,
@@ -210,6 +216,7 @@
 				E0102B1F299D4979001D3C08 /* SearchService.swift */,
 				E0102B21299D498C001D3C08 /* FollowService.swift */,
 				693D0C5D29A141500068CA36 /* ForgotPasswordViewModel.swift */,
+				4BC5D38329A35ADB00097390 /* GIFControllerViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -264,6 +271,8 @@
 				E0102B0F299D473B001D3C08 /* FirebaseStorage */,
 				693D0C4F29A0F2B50068CA36 /* FirebaseAnalytics */,
 				693D0C5129A0F2C30068CA36 /* FirebaseMessaging */,
+				4BC5D38629A35B4700097390 /* SDWebImageSwiftUI */,
+				4BC5D38929A35B7D00097390 /* GiphyUISDK */,
 			);
 			productName = Briefull;
 			productReference = E0102AB0299D3F56001D3C08 /* Briefull.app */;
@@ -296,6 +305,8 @@
 			mainGroup = E0102AA7299D3F56001D3C08;
 			packageReferences = (
 				E0102B08299D473A001D3C08 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				4BC5D38529A35B4700097390 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+				4BC5D38829A35B7D00097390 /* XCRemoteSwiftPackageReference "giphy-ios-sdk" */,
 			);
 			productRefGroup = E0102AB1299D3F56001D3C08 /* Products */;
 			projectDirPath = "";
@@ -357,6 +368,7 @@
 				E0102AE3299D4395001D3C08 /* Tab.swift in Sources */,
 				E0102B12299D48F3001D3C08 /* AuthService.swift in Sources */,
 				E0102AD5299D42BC001D3C08 /* Items.swift in Sources */,
+				4BC5D38429A35ADB00097390 /* GIFControllerViewModel.swift in Sources */,
 				693D0C6029A141860068CA36 /* ForgotPasswordService.swift in Sources */,
 				E0102B03299D44B5001D3C08 /* FollowButton.swift in Sources */,
 				E0102B18299D492F001D3C08 /* SessionStore.swift in Sources */,
@@ -582,6 +594,22 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		4BC5D38529A35B4700097390 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		4BC5D38829A35B7D00097390 /* XCRemoteSwiftPackageReference "giphy-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Giphy/giphy-ios-sdk";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 		E0102B08299D473A001D3C08 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
@@ -593,6 +621,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		4BC5D38629A35B4700097390 /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4BC5D38529A35B4700097390 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+		4BC5D38929A35B7D00097390 /* GiphyUISDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4BC5D38829A35B7D00097390 /* XCRemoteSwiftPackageReference "giphy-ios-sdk" */;
+			productName = GiphyUISDK;
+		};
 		693D0C4F29A0F2B50068CA36 /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = E0102B08299D473A001D3C08 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
