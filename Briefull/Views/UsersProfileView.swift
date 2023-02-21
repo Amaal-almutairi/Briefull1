@@ -12,21 +12,13 @@ struct UsersProfileView: View {
     var user: User
     @EnvironmentObject var profileService : ProfileService
     @EnvironmentObject var session: SessionStore //current
+    @State var profileImage: Image?
 
     let threeColumns = [GridItem(), GridItem(), GridItem()]
     
     var body: some View {
         ScrollView{
-            ProfileHeader(user: user, postsCounts:
-                            profileService.posts.count, following:
-                            $profileService.following, followers:
-                            $profileService.followers)
-            HStack {
-                FollowButton(user: user, followCheck:
-                                $profileService.followCheck, followingCount:
-                                $profileService.following, followersCount:
-                                $profileService.followers)
-            }.padding(.horizontal)
+            ProfileHeaderUsers(user: user, profileImage: profileImage)
                 Divider()
             if let currentUserFriends = session.session?.friends {
                 if (currentUserFriends.contains(user.uid)) {

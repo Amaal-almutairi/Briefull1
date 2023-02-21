@@ -12,11 +12,7 @@ import FirebaseAuth
 struct Profile: View {
     @EnvironmentObject var session: SessionStore
     @EnvironmentObject var profileService: ProfileService
-//    var user:User
-    //
-    //    func listen(){
-    //        session.listen()
-    //    }
+
     
     var body: some View {
         ScrollView{
@@ -59,11 +55,3 @@ struct Profile_Previews: PreviewProvider {
     }
 }
 
-/*
- VStack{
-     ProfileHeader(user: self.session.session, vlogsCounts: profileService.videos.count, friends: $profileService.friendsList, request: $profileService.requestList)
-     //                ProfileHeader(user: self.session.session, vlogsCounts: profileService.videos.count , friends:$profileService.friendsList)
-     
-     // .navigationViewStyle(.stack)
- }
- */

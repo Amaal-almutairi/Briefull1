@@ -30,7 +30,8 @@ struct BriefullApp: App {
         WindowGroup {
             NavigationView{
                 HomeView()
-            }.environmentObject(SessionStore()).environmentObject(ProfileService()).environmentObject(FollowService())
+            }
+            .environmentObject(SessionStore()).environmentObject(ProfileService()).environmentObject(FollowService())
                 //.environmentObject(VideotCardService())
         }
         }

@@ -6,86 +6,99 @@
 //
 
 import SwiftUI
-//import SDWebImageSwiftUI
+import SDWebImageSwiftUI
 
 struct ProfileHeader: View {
-//    @State var userName = ""
-//    @State var nickName = ""
+
      var user:User?
     var postsCounts:Int
     @Binding var following:Int
     @Binding var followers:Int
-    
-//    var userName:User
-//    @Binding var friends:Int
-//    @Binding var request:Int
-//     var vlogsCounts:Int
-
+    @State var profileImage: Image?
+    @State var pickedImage: Image?
+    @State var showingActionSheet = false
+    @State private var imageData = Data()
+    @State var sourceType: UIImagePickerController.SourceType = .photoLibrary
+    @State var showingImagePiker = false
     @EnvironmentObject var sessionVm: SessionStore
-    @EnvironmentObject var followService:FollowService
-    @EnvironmentObject var profileService:ProfileService
 
+    func loadImage() {
+        guard let inputImage = pickedImage else{return}
+        profileImage = inputImage
+        
+    }
     var body: some View {
         ScrollView{
             VStack(alignment: .center){
-                
-                ZStack(alignment: .bottomTrailing) {
-                    Image(systemName: "person.circle")
-                        .profileImageMod()
-                    
-                }.padding(.top,20)
-//                Text(" nickName \(nickName)").font(.headline)
-//                Text(sessionVm.session?.username ?? "UkUsername")
-                Text(user?.username ?? "").font(.headline)
-                HStack{
-                    VStack{
-                        Text(" Vlogs").padding(.leading, 50)
-                        Text("  \(postsCounts)").font(.headline).padding(.leading, 50)
+                if user != nil {
+                    if  let userProfile = user?.profileImageUr1{
+                        WebImage(url: URL(string: userProfile))
+                            .resizable()
+                            .scaledToFit()
+                            .clipShape(Circle())
+                            .frame(width: 0.9, height: 100, alignment: .trailing)
+                            .padding(.leading)
                     }
+                }else{
+                    Color.init(red: 0.9, green: 0.9, blue: 0.9).frame(width: 100, height: 100, alignment: .trailing)
+                        .padding()
+                }
+                VStack{
+                    if profileImage != nil {
+                        profileImage!.resizable()
+                            .clipShape(Circle())
+                            .frame(width: 100, height: 100)
+                            .padding()
+                            .onTapGesture {
+                                self.showingActionSheet = true
+                            }
+                    }else{
+                        ZStack(alignment: .top) {
+                            Image(systemName: "person.circle")
+                                .resizable()
+                                .clipShape(Circle())
+                                .frame(width: 100, height: 100)
+                                .padding()
+                            .onTapGesture {
+                                self.showingActionSheet = true
+                            }
+                        }
+                    }
+                     
+                            
+                        
+                    
+                    Text(user?.username ?? "").font(.headline)
                     Spacer()
-                    HStack{
-                        VStack{
-                            Text(" friends")
-                            Text("  \(profileService.followers)").font(.headline)
+                }
 
-//                            NavigationLink(destination: FindFriends(user:  User(uid: "9988", email: "amaal@gmail.com", profileImageUr1: "", username: "moly", searchName: [""], caption: "molyus"))) {
-//
-//                            }
-                        }.padding(.trailing,40)
-//                        Spacer()
-                        VStack{
-                            Text(" request")
-                            Text("  \(profileService.following)").font(.headline)
-
-//                            NavigationLink(destination: FindFriends(user:  User(uid: "9988", email: "amaal@gmail.com", profileImageUr1: "", username: "moly", searchName: [""], caption: "molyus"))) {
-//
-//                            }
-                        }.padding(.trailing,40)
-//                        Text("\(friends)").font(.headline).padding(.trailing, 50)
-                    }
-                    
-                }.padding(.vertical,20)
-//                HStack(alignment: .center){
-//                    FollowButton(user: user ?? User(uid: "9988", email: "amaal@gmail.com", profileImageUr1: "", username: "moly", searchName: [""], caption: "molyus"), followCheck: $profileService.followCheck, followingCount: $profileService.following, followersCount: $profileService.followers).modifier(Items.ButtonModifierRequest())
-//                }
-//                Divider().fontWidth(.standard)
-                Spacer().padding()
+                
                 
             }
+        }    .sheet(isPresented: $showingImagePiker, onDismiss: loadImage) {
+            ImagePicker(selectedImage: self.$pickedImage, showImagePiker: self.$showingImagePiker, imageData: self.$imageData)
+//            ImagePicker(selectedImage: self.$pickedImage, showImagePiker: self.$showImagePikerProfile, imageData: self.$imageData)
+        }.actionSheet(isPresented: $showingActionSheet){
+            ActionSheet(title: Text(""), buttons: [
+                .default(Text("Choose A Photo")){
+                    self.sourceType = .photoLibrary
+                    self.showingImagePiker = true
+                }, .cancel()
+            ])
         }
         
     }
 }
-//struct ProfileHeader_Previews: PreviewProvider {
-//    @EnvironmentObject var sessionVm: SessionStore
-//
-//    static var previews: some View {
-//
-//        ProfileHeader(user: User?(User(uid: "9988", email: "amaal@gmail.com", profileImageUr1: "", username: "moly", searchName: [""], caption: "molyus")), postsCounts: 0, following:.constant(0), followers:.constant(0))
-//
-////        ProfileHeader(user: User(uid: "9988", email: "amaal@gmail.com", profileImageUr1: "", username: "moly", searchName: [""], caption: "molyus"), vlogsCounts: .constant(0), friends:.constant(0))
-//            .environmentObject(SessionStore())
-//
-//    }
-//}
+struct ProfileHeader_Previews: PreviewProvider {
+    @EnvironmentObject var sessionVm: SessionStore
+
+    static var previews: some View {
+
+        ProfileHeader(user: User?(User(uid: "9988", email: "amaal@gmail.com", profileImageUr1: "", username: "moly", searchName: [""], caption: "molyus")), postsCounts: 0, following:.constant(0), followers:.constant(0))
+
+//        ProfileHeader(user: User(uid: "9988", email: "amaal@gmail.com", profileImageUr1: "", username: "moly", searchName: [""], caption: "molyus"), vlogsCounts: .constant(0), friends:.constant(0))
+            .environmentObject(SessionStore())
+
+    }
+}
 

@@ -21,7 +21,7 @@ struct SignUp: View {
     @State private var error:String = ""
     @State private var showingAlert = false
     @State private var alertTitle: String = "Oh No"
-    @State private var videoData = Data()
+    @State private var imageData = Data()
     @State private var isLinkActive = false
     
     func errorCheck() -> String? {
@@ -39,7 +39,7 @@ struct SignUp: View {
         self.userName = ""
         self.passWord = ""
         self.ConfermPassWord = ""
-        self.videoData = Data()
+        self.imageData = Data()
         
     }
     func signUp() {
@@ -50,7 +50,7 @@ struct SignUp: View {
             return
         }
         
-        AuthService.signUp(username: userName, email: email, password: passWord, imageData:videoData, onSuccess:{
+        AuthService.signUp(username: userName, email: email, password: passWord, imageData:imageData, onSuccess:{
             (user) in self.clear()
         }){ errorMessage in
             print("Error \(errorMessage)")

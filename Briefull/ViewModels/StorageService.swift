@@ -17,7 +17,8 @@ class StorageService{
     static var storageRoot = storage.reference()
     static var storageProfile = storageRoot.child("profile")
     static var storageVideo = storageRoot.child("Vlogs")
-    
+//    static var image:UIImage?
+    //انا بعد سويت كومنت لهذي //
     
     static func storageVideoId(videoId:String) -> StorageReference {
         return storageVideo.child(videoId)
@@ -69,6 +70,71 @@ class StorageService{
             
         }
     }
+    
+//    private func persistImageToStorage() {
+//
+//        guard let uid = Auth.auth().currentUser?.uid else{return}
+//        let ref = Storage.storage().reference(forURL: uid)
+//        guard let imageData = StorageService.image?.jpegData(compressionQuality: 0.5) else{return}
+//        ref.putData(imageData, metadata: nil) { metadata, err in
+//            if let err = err {
+//                self.StateMessage = "Failed to push image to storage: \(err)"
+//                return
+//            }
+//            ref.downloadURL { url, err in
+//                if let err = err {
+//                    self.StateMessage = "Failed to retrieve Data DownloadURL: \(err)"
+//                    return
+//                }
+//                self.StateMessage = "Successfully stored image ith url: \(url?.absoluteString ?? "")"
+//                print(url?.absoluteString)
+//            }
+//        }
+//    }
+    
+    
+//    static func saveProfileImage(userId:String, username:String, imageData: Data,
+//                                 metaData:StorageMetadata, storageProfileImageRef: StorageReference, onSuccess: @escaping(_ user: User) ->
+//                                 Void, onError: @escaping(_ errorMessage: String) -> Void ) {
+//        storageProfileImageRef.putData(imageData,metadata: metaData) {
+//            (StorageMetadata, error) in
+//            if error != nil {
+//                onError (error!.localizedDescription)
+//                return
+//            }
+//            storageProfileImageRef.downloadURL{
+//                (url, error) in
+//                if let metaImageUr1 = url?.absoluteString {
+//
+//                    if let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest(){
+//                        changeRequest.photoURL = url
+//                        changeRequest.displayName = username
+//                        changeRequest.commitChanges{
+//                            (error) in
+//                            if error != nil {
+//                                onError(error?.localizedDescription ?? "unKnown")
+//                                return
+//                            }
+//                        }
+//                    }
+//
+//                    let firestoreUserId = AuthService.getUserId(userId: userId)
+//                    let user = User.init(uid: userId, email: "", profileImageUr1: metaImageUr1, username: username, searchName: username.splitString(), caption: "")
+//
+//                    guard let dict = try?user.asDictionary() else {return}
+//                    firestoreUserId.setData(dict) { (error) in
+//                        if error != nil {
+//                            onError(error!.localizedDescription)
+//                        }
+//
+//                    }
+//                    onSuccess(user)
+//                }
+//
+//            }
+//
+//        }
+//    }
     
     static func saveVideo(userId:String, caption:String, videoId:String, imageData:Data, metaData:StorageMetadata, storageVideoRef: StorageReference, onSuccess: @escaping() -> Void ,onError: @escaping(_ errorMessage: String) -> Void){
         storageVideoRef.putData(imageData,metadata: metaData) {

@@ -24,6 +24,7 @@ struct Tab: View {
                     .tag("camera.viewfinder")
                 Timeline()
                     .tag("camera.on.rectangle")
+
             }
             .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
             .ignoresSafeArea(.all, edges: .bottom)

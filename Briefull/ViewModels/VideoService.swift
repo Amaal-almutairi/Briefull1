@@ -34,6 +34,7 @@ class VideoService{
         }
         
         let videoId = VideoService.VideosUserId(userId: userld).collection("Vlogs").document().documentID
+        
         let storageVideoRef = StorageService.storageVideoId(videoId: videoId)
         let metadata = StorageMetadata()
         metadata.contentType = ""
